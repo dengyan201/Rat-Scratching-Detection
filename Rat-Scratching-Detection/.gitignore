@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env/
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# Large/private data
+*.pt
+*.pth
+*.ckpt
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Generated/training data
+cache/
+runs/
+predictions/
+results/*.csv
+*.log
