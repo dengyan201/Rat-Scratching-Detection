@@ -72,20 +72,6 @@ python scratching_detection/detect_new_video.py \
   --batch-size 2
 ```
 
-## Preprocessing and inference
-
-Default settings are:
-
-- 48 consecutive frames per input clip
-- expected video frame rate: 30 fps
-- sliding-window stride: 6 frames (0.2 s at 30 fps)
-- resize to 640 x 360 using OpenCV area interpolation (`cv2.INTER_AREA`)
-- aspect-ratio-preserving letterbox to 224 x 224 pixels
-- scratching probability threshold: 0.50
-- event merge gap: 0.50 s
-
-For final evaluation, threshold and event-merging settings should be determined on the validation set and locked before analysis of an independent test set.
-
 ## Output
 
 Two CSV files are generated.
