@@ -46,7 +46,7 @@ The checkpoint is not included in the Git repository because model files can be 
 Place a new video in:
 
 ```text
-demo_video/new_rat.mp4
+demo_video/Demo.mp4
 ```
 
 The model was developed using overhead-view videos recorded at approximately 30 fps.
@@ -66,10 +66,7 @@ python scratching_detection/detect_new_video.py \
   --video demo_video/new_rat.mp4 \
   --checkpoint models/best.pt \
   --output-prefix results/new_rat \
-  --threshold 0.50 \
-  --stride-frames 6 \
-  --merge-gap-sec 0.50 \
-  --batch-size 2
+
 ```
 
 ## Output
