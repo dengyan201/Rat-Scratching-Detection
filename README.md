@@ -46,7 +46,7 @@ The checkpoint is not included in the Git repository because model files can be 
 Place a new video in:
 
 ```text
-demo_video/Demo.mp4
+demo_video/new_rat.mp4
 ```
 
 The model was developed using overhead-view videos recorded at approximately 30 fps.
@@ -66,7 +66,10 @@ python scratching_detection/detect_new_video.py \
   --video demo_video/new_rat.mp4 \
   --checkpoint models/best.pt \
   --output-prefix results/new_rat \
-
+  --threshold 0.50 \
+  --stride-frames 6 \
+  --merge-gap-sec 0.50 \
+  --batch-size 2
 ```
 
 ## Output
@@ -81,25 +84,6 @@ results/new_rat_events.csv
 `new_rat_windows.csv` contains the probability for each sliding window.
 
 `new_rat_events.csv` contains merged scratching events, including readable whole-second timing:
-
-```text
-event,start_sec,end_sec,start_time,end_time,duration_sec,max_probability
-1,620.4,622.2,10 min 20 sec,10 min 22 sec,1.8,0.9814
-```
-
-The continuous second values are retained for quantitative analysis, while `start_time` and `end_time` are rounded to whole seconds for readability.
-
-## Model architecture
-
-The detector uses a torchvision R3D-18 backbone with two temporal self-attention modules inserted after later R3D stages, followed by adaptive global pooling and binary classification.
-
-## Citation
-
-If you use this code, please cite the associated manuscript:
-
-```text
-[Add the final manuscript citation here]
-```
 
 ## License
 
