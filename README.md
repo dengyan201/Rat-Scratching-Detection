@@ -1,6 +1,6 @@
 # Automatic Rat Scratching Detection
 
-Inference code for automatic detection of rat scratching events from video using a trained R3D-18 network with temporal self-attention.
+Source code for our published article: **"A robust deep learning–based video system for high-accuracy automated detection of scratching behavior in rat itch models"**
 
 ## Repository structure
 
